@@ -1,0 +1,165 @@
+@import '../../misc-styles/fonts-mixins.scss';
+@import '../../misc-styles/variables.scss';
+
+.musicSection {
+	color: silver;
+	position: absolute;
+	top: 180px;
+	z-index: 7;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	font-family: 'Maven Pro';
+	transition: all 2s;
+	opacity: 1;
+	margin: 0;
+	// border: 1px solid red;
+
+	&__headers-container {
+		display: flex;
+		margin: 0;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		width: 100%;
+		position: absolute;
+		left: 5%;
+		z-index: 15;
+		color: whitesmoke;
+		font-family: 'Lekton';
+		// border: 1px solid red;
+		font-size: 1.4rem;
+	}
+	&__performance-section-header-container {
+		position: relative;
+		transition: all 1s;
+		margin: 0% 0;
+	}
+	&__engineering-section-header-container {
+		position: relative;
+		left: 5%;
+	}
+	&__performance-header-title,
+	&__engineering-header-title {
+		margin: 5% 0;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	&__back-button {
+		position: absolute;
+		left: -3%;
+		font-size: 0.9em;
+		bottom: 49%;
+		color: grey;
+		&:hover {
+			color: white;
+			cursor: pointer;
+		}
+	}
+	&__divider {
+		font-size: 01rem;
+		margin: 0 2vw;
+		font-weight: 400;
+		display: none;
+	}
+
+	@include mobile-small-only() {
+		top: 140px;
+
+		&__divider {
+			display: flex;
+			font-family: 'Poppins';
+			font-size: 1.7rem;
+		}
+		&__headers-container {
+			left: 34px;
+		}
+		&__back-button {
+			left: -7%;
+			font-size: 0.9rem;
+			bottom: 46px;
+			color: grey;
+		}
+		&__performance-header-title,
+		&__engineering-header-title {
+			margin: 7% 0;
+			font-size: 1.9rem;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+		&__engineering-section-header-container {
+			position: relative;
+			left: 7%;
+		}
+	}
+	@include mobile-only() {
+	}
+	@include tablet-only() {
+		top: 200px;
+
+		&__sections-header {
+			font-size: 2.3rem;
+		}
+		&__divider {
+			font-size: 2rem;
+			margin: 1vh 2vw;
+		}
+		&__back-button {
+			top: -15px;
+			left: -34px;
+		}
+		&__performance-header-title,
+		&__engineering-header-title {
+			margin: 4% 0;
+			font-size: 1.9rem;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+		&__headers-container {
+			left: 8%;
+		}
+	}
+}
+.center {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+.music-section-open-left-underline {
+	&:before {
+		content: '';
+		position: absolute;
+		width: 170%;
+		height: 2px;
+		bottom: 10px;
+		left: -2%;
+		opacity: 0.6;
+		animation: music-section-left 3s 1;
+		background: rgb(2, 0, 36);
+		background: linear-gradient(
+			90deg,
+			rgba(2, 0, 36, 0.6993172268907564) 1%,
+			rgba(243, 229, 230, 1) 7%,
+			rgba(237, 223, 225, 1) 85%,
+			rgba(22, 7, 37, 1) 100%
+		);
+		transition: all 0.7s ease-in-out 0s;
+	}
+}
+@keyframes music-section-left {
+	0% {
+		opacity: 0;
+		width: 2%;
+	}
+	100% {
+		opacity: 0.6;
+		width: 170%;
+	}
+}
+.hover-underline-music-section {
+	@include hover-underline-left-music-section;
+}

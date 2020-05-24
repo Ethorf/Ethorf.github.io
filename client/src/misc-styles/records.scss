@@ -1,0 +1,169 @@
+@import './fonts-mixins.scss';
+@import './variables.scss';
+
+.ex-kathedra-header {
+	font-family: 'Righteous';
+	color: white;
+}
+.solo-header {
+	font-family: 'Montserrat';
+	color: white;
+}
+.autocatalytica-header {
+	font-family: 'October Guard';
+	color: white;
+	@include mobile-small-only() {
+		font-size: 2.3rem;
+	}
+}
+.hosana-header {
+	color: white;
+}
+.records {
+	font-family: 'Montserrat';
+
+	&__header-back-container {
+		display: flex;
+		width: 80%;
+		justify-content: flex-end;
+		flex-direction: row-reverse;
+		margin-left: -24px;
+		align-items: center;
+		margin-top: -100px;
+	}
+	&__bio-description {
+		font-size: 1.1rem;
+		width: 60%;
+	}
+	&__album-container {
+		color: white;
+		margin-bottom: 2vh;
+	}
+	&__album-header {
+		font-size: 1.8rem;
+	}
+	&__album-artwork {
+		height: 35vh;
+	}
+	&__album-art-description-container {
+		display: flex;
+		font-size: 1.1rem;
+	}
+	&__album-description {
+		width: 40%;
+		list-style: square;
+	}
+	&__section-header {
+		margin: 2vh 0;
+		font-size: 2rem;
+		color: white;
+	}
+	&__link-icon {
+		height: 3vh;
+		margin-right: 1vw;
+	}
+	&__links {
+		margin-top: 3vh;
+		list-style: none;
+	}
+	&__video-container {
+		width: 90%;
+	}
+	&__video-two-container {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__video-header {
+		text-decoration: none;
+		color: silver;
+		padding-bottom: 50px;
+		transition: all 0.5s;
+		&:hover {
+			transition: all 0.5s;
+
+			color: white;
+		}
+	}
+	&__header-open {
+		color: white;
+	}
+	&__back-button {
+		font-size: 1rem;
+		position: relative;
+		left: -2%;
+		color: grey;
+		transition: all 1s;
+		&:hover {
+			transition: all 1s;
+			color: white;
+			cursor: pointer;
+		}
+	}
+	@include mobile-small-only() {
+		&__album-art-description-container {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 3vh;
+		}
+		&__album-description {
+			width: 80%;
+		}
+		&__section-header {
+			margin-top: 4vh;
+			font-size: 1.6rem;
+		}
+		&__album-artwork {
+			height: 40vh;
+			width: 65vw;
+		}
+		&__link-icon {
+			height: 5vh;
+			margin-right: 3vw;
+		}
+		&__bio-header {
+			margin-top: 3vh;
+			font-size: 1.6rem;
+		}
+		&__bio-description {
+			width: 90%;
+		}
+		&__header-open {
+			font-size: 3.1rem;
+			color: white;
+			margin-top: 10vh;
+		}
+		&__back-button {
+			font-size: 1.2rem;
+			&:hover {
+				color: white;
+			}
+		}
+		&__video {
+			width: 90%;
+		}
+	}
+	@include mobile-only() {
+		&__header-open {
+			margin-top: 20%;
+		}
+		&__album-artwork {
+			height: 30vh;
+			width: 45vw;
+		}
+		&__back-button {
+			margin-left: 2vw;
+		}
+	}
+	@include tablet-only() {
+		top: -100px;
+		&__back-button {
+			margin-top: 1vh;
+		}
+		&__video {
+			width: 90%;
+		}
+		&__bio-description {
+			width: 90%;
+		}
+	}
+}

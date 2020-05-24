@@ -1,0 +1,130 @@
+@import '../../misc-styles/fonts-mixins.scss';
+@import '../../misc-styles/variables.scss';
+
+.engineering {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Montserrat';
+	// border: 1px solid red;
+	position: relative;
+	top: 110px;
+	left: -210px;
+
+	&__album-container {
+		color: white;
+		margin-bottom: 2vh;
+		display: flex;
+	}
+	&__engineering-header {
+		color: white;
+	}
+	&__album-header {
+		font-size: 1.8rem;
+	}
+	&__album-artwork {
+		height: 35vh;
+	}
+	&__link-icon {
+		height: 5vh;
+		margin-right: 1vw;
+		&:hover {
+			content: url('../../assets/Icons/silver/spotify-light-silver.png');
+		}
+	}
+	&__sections-header-container {
+		width: 50vw;
+	}
+	&__links-container {
+		font-size: 1.3rem;
+		width: 40%;
+	}
+	&__links {
+		margin-top: 3vh;
+		list-style: none;
+	}
+
+	@include mobile-small-only() {
+		left: 1px;
+		top: 60px;
+		&__sections-header-container {
+			width: 90vw;
+		}
+		&__sections-header {
+			display: flex;
+			flex-direction: column;
+			height: 6vh;
+			width: 100%;
+			line-height: 0.3;
+			margin-bottom: 3vh;
+		}
+		&__engineering-header {
+			display: flex;
+			font-size: 1.4rem;
+		}
+		&__album-header {
+			font-size: 1.4rem;
+		}
+		&__album-container {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+		&__album-artwork {
+			height: 35vh;
+			margin-top: 5vh;
+		}
+		&__links-container {
+			font-size: 1.3rem;
+			width: 80%;
+			height: 100%;
+			margin-bottom: 10vh;
+		}
+	}
+	@include mobile-only() {
+		&__engineering-header {
+			margin-left: 0;
+			display: flex;
+			font-size: 1.4rem;
+		}
+		&__sections-header {
+			height: 6vh;
+			width: 100%;
+			line-height: 0.3;
+			margin-bottom: 3vh;
+		}
+		&__album-artwork {
+			height: 35vh;
+			margin-top: 5vh;
+		}
+		&__sections-header-container {
+			width: 90vw;
+		}
+		&__album-container {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+	}
+	@include tablet-only() {
+		display: flex;
+		width: 90%;
+		left: 1px;
+
+		&__sections-header {
+			display: flex;
+			flex-direction: column;
+			height: 8vh;
+			width: 110%;
+			line-height: 0;
+		}
+		&__engineering-header {
+			font-size: 1.4rem;
+		}
+		&__album-container {
+			width: 90vw;
+		}
+	}
+}
+li {
+	margin-bottom: 1vh;
+}
